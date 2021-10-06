@@ -1,0 +1,12 @@
+.hljs-tag,.language-xml{
+    color: white;
+}
+.hljs{
+    padding: 20px;
+    border-radius: 20px;
+}
+@media screen and (min-width: 768px) {
+    .hljs{
+        padding: 40px;
+    }
+}

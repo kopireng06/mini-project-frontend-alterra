@@ -19,14 +19,15 @@ const formats = [
     'link', 'image'
 ]
   
-const MyReactQuill = ({content,setContent})=> {;
+const MyReactQuill = ({content,setContent,error})=> {;
     return (
         <>
-            <label className="block nunito mx-2 font-semibold text-global-dark-blue">Content</label>
+            <label className="block col-span-12 nunito mx-2 font-semibold text-global-dark-blue">Content</label>
             <div className="col-span-12 mt-2 mx-2 shadow">
                 <ReactQuill theme="snow"  modules={modules}
                 formats={formats} value={content} onChange={setContent}/>
             </div>
+            {error ? <p className="text-red-600 col-span-12 mt-2 mx-2 text-sm font-semibold">{error}</p>:<p></p>}
         </>
     );
 }

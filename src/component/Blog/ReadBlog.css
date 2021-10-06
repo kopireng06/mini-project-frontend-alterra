@@ -1,0 +1,12 @@
+.read-blog h2{
+    font-size: 1.5em;
+    font-weight: 700;
+    font-family: 'Nunito', sans-serif;
+}
+.read-blog ul{
+    list-style-type: disc;
+    margin-left: 30px;
+}
+pre{
+    white-space: pre-wrap;
+}
