@@ -43,7 +43,7 @@ const useManageInput = (config) => {
                 for (let i=0; i<checkOption.length; i++) {
                     if(checkOption[i].checked){
                         checked.push({
-                            id_categories:i+1
+                            id_categories:checkOption[i].value
                         })
                     }
                 }
