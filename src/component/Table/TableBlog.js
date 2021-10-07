@@ -17,21 +17,13 @@ import ConfirmDelete from "./ConfirmDelete";
 const TableBlog = () => {
     
     const {data:dataBlog,loading:loadingGetBlog,refetch} = useQuery(queryGetBlog);
-    const [deleteBlog,{loading:loadingDeleteBlog}] = useMutation(mutationDeleteBlog);
+    const [deleteBlog] = useMutation(mutationDeleteBlog,{
+        onCompleted:()=>window.location.href="/blog"
+    });
     const [confirmDelete,setConfirmDelete] = useState({
         condition:false,
         id:0
     });
-
-    useEffect(()=>{
-        if(!loadingDeleteBlog){
-            refetch();
-            setConfirmDelete({
-                condition:false,
-                id:0
-            })
-        }
-    },[loadingDeleteBlog])
 
     const handleClickTrash = (id)=>{
         setConfirmDelete({
